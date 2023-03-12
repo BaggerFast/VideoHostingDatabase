@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 19.00
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{69A91866-802F-46EB-A4A7-054F73E9BF66}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dAda", "dAda", "{E23AEDB6-2586-4318-AFDA-958E83F154C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dawdawd", "dawdawd", "{0417BF20-ECF3-40F3-BD56-60D1760E728A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder2", "NewFolder2", "{459BDEBF-2362-423E-9A15-4BA959C4DEDA}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9676E97B-2826-40FC-B706-8468CB6E42B8}
+	EndGlobalSection
+EndGlobal
