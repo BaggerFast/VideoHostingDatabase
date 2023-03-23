@@ -1,5 +1,4 @@
 ﻿# Microsoft docker-compose
-# default user: SA
 #https://hub.docker.com/_/microsoft-mssql-server
 version: "3"
 services:
@@ -10,8 +9,15 @@ services:
         ports:
             - "1433:1433"
         volumes:
-            - "/etc/ms_data/:/var/lib/mssqlql/data"
+            - type: bind
+              source: "${PWD}/DataCsv"
+              target: /DataCsv
+            - type: volume
+              source: mssql_data
+              target: "/var/opt/mssql/data"
         environment:
             MSSQL_PID: "Developer"
             ACCEPT_EULA: "Y"
             MSSQL_SA_PASSWORD: "root"
+volumes:
+    mssql_data:
