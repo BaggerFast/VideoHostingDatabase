@@ -14,6 +14,6 @@ END ELSE BEGIN
 	SELECT
 		[TAG].[UID],
         [TAG].[TITLE]
-	FROM [TAGS] [TAG] WHERE [TITLE] = 'Python'
+	FROM [TAGS] [TAG]
 	ORDER BY [TAG].[TITLE];
 END;
