@@ -22,11 +22,11 @@ BEGIN
     CREATE TABLE #CSV (
         [AGE] TINYINT NOT NULL,
     );
-    BULK INSERT #CSV FROM 'age_restrictions.csv'
+    BULK INSERT #CSV FROM '/DataCsv/age_restrictions.csv'
     WITH (
 	    FIRSTROW = 2,
 	    FIELDTERMINATOR = ';',
-	    ROWTERMINATOR = '0x0A'
+	    ROWTERMINATOR = '\n'
     );
     PRINT N'➕ CREATE TEMP TABLES IS SUCCESS'
 END;
@@ -41,7 +41,7 @@ BEGIN
             USING (VALUES (@AGE)) AS [NEW_AGES] ([AGE])
             ON [AGES].[AGE] = [NEW_AGES].[AGE]
             WHEN NOT MATCHED THEN
-                INSERT ([UID], [AGE]) VALUES (NEWID(), [NEW_AGES].[AGE]);
+                INSERT ([AGE]) VALUES ([NEW_AGES].[AGE]);
         FETCH NEXT FROM CUR INTO @AGE;
     END;
     CLOSE CUR;

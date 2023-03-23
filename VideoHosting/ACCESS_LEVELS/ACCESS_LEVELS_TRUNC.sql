@@ -6,7 +6,7 @@ SET ANSI_NULLS ON;
 SET QUOTED_IDENTIFIER ON;
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
 
-DECLARE @IS_COMMIT BIT = 0;
+DECLARE @IS_COMMIT BIT = 1;
 -------------------------------------------------------------------------------------------------
 USE VideoHosting;
 
