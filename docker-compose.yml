@@ -5,12 +5,13 @@ services:
     mssql-dev:
         container_name: mssql-dev
         image: mcr.microsoft.com/mssql/server:2019-latest
+        user: root
         restart: unless-stopped
         ports:
             - "1433:1433"
         volumes:
             - type: bind
-              source: "${PWD}/DataCsv"
+              source: "./DataCsv"
               target: /DataCsv
             - type: volume
               source: mssql_data
@@ -18,6 +19,6 @@ services:
         environment:
             MSSQL_PID: "Developer"
             ACCEPT_EULA: "Y"
-            MSSQL_SA_PASSWORD: "root"
+            MSSQL_SA_PASSWORD: "6NJLC4Phf7oGbw"
 volumes:
     mssql_data:
