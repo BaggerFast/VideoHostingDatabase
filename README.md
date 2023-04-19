@@ -20,24 +20,27 @@ MSSQL_SA_PASSWORD=""
 ```
 4) Connect to database via [docker-compose](docker-compose.yml)
 ```bash
-docker-compose -up
+docker compose up
 ```
 5) Scripts structure
    - STRUCTURE.sql - Create table
+   - TRIGGERS.sql - Create triggers for table
    - INSERT.sql - Insert data into table
    - SELECT.sql - Select table
    - TRUNCATE.sql - Clear table
    - DROP.sql - Delete table
 6) Use scripts in this order
-   - [TAGS](VideoHosting/TAGS)
-   - [ACCESS_LEVELS](VideoHosting/ACCESS_LEVELS)
-   - [AGE_RESTRICTIONS](VideoHosting/AGE_RESTRICTIONS) 
-   - [USERS](VideoHosting/USERS)
-   - [VIDEOS](VideoHosting/VIDEOS) 
-   - [FK_VIDEO_TAGS](VideoHosting/_FK_VIDEO_TAGS)
-   - [VIEW](VideoHosting/VIEWS)
-   - [COMMENTS](VideoHosting/COMMENTS)
-   - [SUBSCRIPTIONS](VideoHosting/SUBSCRIPTIONS)
-   - [REACTIONS](VideoHosting/REACTIONS)
-   - [PLAYLISTS](VideoHosting/PLAYLISTS)
-   - [FK_VIDEO_PLAYLISTS](VideoHosting/_FK_VIDEO_PLAYLISTS)
+   - [TAGS](VideoHosting/Tables/TAGS)
+   - [ACCESS_LEVELS](VideoHosting/Tables/ACCESS_LEVELS)
+   - [AGE_RESTRICTIONS](VideoHosting/Tables/AGE_RESTRICTIONS) 
+   - [USERS](VideoHosting/Tables/USERS)
+   - [VIDEOS](VideoHosting/Tables/VIDEOS) 
+   - [FK_VIDEO_TAGS](VideoHosting/Tables/_FK_VIDEO_TAGS)
+   - [VIEW](VideoHosting/Tables/VIEWS)
+   - [COMMENTS](VideoHosting/Tables/COMMENTS)
+   - [SUBSCRIPTIONS](VideoHosting/Tables/SUBSCRIPTIONS)
+   - [REACTIONS](VideoHosting/Tables/REACTIONS)
+   - [PLAYLISTS](VideoHosting/Tables/PLAYLISTS)
+   - [FK_VIDEO_PLAYLISTS](VideoHosting/Tables/_FK_VIDEO_PLAYLISTS)
+   - [FUNCTIONS](VideoHosting/Misc/FUNCTIONS.sql)
+   - [PROCEDURES](VideoHosting/Misc/PROCEDURES.sql)
